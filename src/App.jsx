@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Download, Share2, ChevronRight, Award } from 'lucide-react';
-import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar } from 'recharts';
+import { LineChart, Line, BarChart, Bar, XAxis } from 'recharts';
 
 const CareerWithNavya = () => {
   const [currentPhase, setCurrentPhase] = useState(0);
