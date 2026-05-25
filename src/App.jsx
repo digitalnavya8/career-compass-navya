@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Download, Share2, ChevronRight, Award, TrendingUp } from 'lucide-react';
+import React, { useState } from 'react';
+import { Download, Share2, ChevronRight, Award } from 'lucide-react';
 import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar } from 'recharts';
 
 const CareerWithNavya = () => {
