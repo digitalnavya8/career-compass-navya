@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerWithNavya - Stream Compass Assessment</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Premium Fonts: Poppins (headings), Inter (body text) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F5F7FA;
+            color: #2D3436;
+            line-height: 1.8;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        /* Custom Rating Button Transitions */
+        .rating-btn {
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        /* Dynamic SVG Ring Animation */
+        .progress-ring-circle {
+            transition: stroke-dashoffset 0.35s;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+        }
+        /* Strict A4 Formatted Print Overrides */
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            body, .print-layout {
+                background: white !important;
+                color: black !important;
+                box-shadow: none !important;
+                border: none !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            .print-card {
+                border: 1px solid #CBD5E1 !important;
+                box-shadow: none !important;
+                background: white !important;
+                color: black !important;
+                page-break-inside: avoid;
+            }
+            .page-break {
+                page-break-before: always;
+            }
+            /* Force SVG and color rendering in print */
+            circle, div, span, h2, h3, h4 {
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased">
+    <!-- Sticky Navigation Header -->
+    <header class="bg-white border-b border-gray-200/80 py-4 px-6 sticky top-0 z-50 shadow-sm no-print">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg flex items-center justify-center font-black text-xl text-emerald-900" style="background-color: #A8D5BA;">
+                    N
+                </div>
+                <div>
+                    <h1 class="text-xl font-extrabold tracking-tight text-gray-800">CareerWithNavya</h1>
+                    <p class="text-[11px] font-bold tracking-wide uppercase text-gray-400">Taking Stream Compass by Navya</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="text-xs font-semibold text-gray-500">Workshop Initiative led by</span>
+                <span class="px-3 py-1.5 rounded-md bg-emerald-50 text-emerald-800 text-xs font-bold border border-emerald-100">Navya M N</span>
+                <span class="text-xs font-semibold text-gray-500 border-l border-gray-300 pl-4">Questions? Reach Navya: <a href="tel:+918309143339" class="text-emerald-700 font-bold hover:underline">+91-8309143339</a></span>
+            </div>
+        </div>
+    </header>
+    <!-- Content Workspace -->
+    <div class="flex-1 max-w-7xl w-full mx-auto px-4 py-8 flex flex-col gap-8">
+        
+        <!-- WELCOME LANDING CARD -->
+        <section id="welcome-panel" class="w-full bg-white rounded-xl border border-gray-200/60 p-6 md:p-8 shadow-sm no-print">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                
+                <div class="lg:col-span-7 space-y-5">
+                    <span class="px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full bg-emerald-50 text-emerald-800 border border-emerald-100 inline-block">2026 Student Edition</span>
+                    <h2 class="text-3xl md:text-4xl font-black text-gray-800 tracking-tight leading-tight">
+                        Find the Right High School Stream Without the <span class="text-emerald-700">Stress & Guesswork</span>
+                    </h2>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        Picking your stream after 10th standard isn't just about selecting school subjects—it is about planning your long-term success. This simple tool will ask you about what you like doing, how you naturally solve puzzles, and your real human skills to clear your confusion.
+                    </p>
+                    <div class="mt-4 p-3 rounded-lg bg-emerald-50 border border-emerald-200">
+                        <p class="text-[11px] text-emerald-800 leading-relaxed"><strong>Scientifically Designed:</strong> This assessment uses established career assessment frameworks to match your strengths with the right stream for YOUR future.</p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 text-xs">
+                        <div class="p-4 rounded-xl bg-slate-50 border border-gray-150 flex gap-3">
+                            <span class="text-xl">
+📊
+</span>
+                            <div>
+                                <h4 class="font-bold text-gray-800 uppercase tracking-wide">Dynamic T-Profile</h4>
+                                <p class="text-gray-500 mt-0.5">Watch your Science, Commerce, and Humanities match scores calculate live as you answer.</p>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-50 border border-gray-150 flex gap-3">
+                            <span class="text-xl">
+🛡
+️</span>
+                            <div>
+                                <h4 class="font-bold text-gray-800 uppercase tracking-wide">Human Moat Radar</h4>
+                                <p class="text-gray-500 mt-0.5">Measure your empathy, communication, and systems thinking strengths against future AI rules.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="startRegistrationFlow()" class="w-full sm:w-auto px-6 py-4 rounded-lg font-bold text-gray-900 transition-all flex items-center justify-center gap-2 shadow-md hover:opacity-95" style="background-color: #A8D5BA;">
+                        Start Stream Compass
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                    </button>
+                </div>
+                <!-- RIGHT PLACEMENT: NAVYA AVATAR CONTAINER -->
+                <div class="lg:col-span-5">
+                    <div class="bg-gray-50/50 border border-gray-200 rounded-xl p-6 text-center relative overflow-hidden">
+                        
+                        <!-- PHOTO REGION HOLDER FOR NAVYA PIC -->
+                        <div class="w-32 h-32 mx-auto rounded-full bg-gray-200 border-4 border-white shadow-md mb-4 flex items-center justify-center overflow-hidden relative group">
+                            <!-- Production Image Integration Tag: <img src="navya-headshot.jpg" class="w-full h-full object-cover"> -->
+                            <svg class="w-12 h-12 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                            </svg>
+                            <div class="absolute inset-0 bg-emerald-900/10 flex items-center justify-center opacity-100"></div>
+                        </div>
+                        <div class="inline-block px-2.5 py-0.5 rounded bg-emerald-100 text-emerald-800 text-[10px] font-bold tracking-widest uppercase mb-2">Your Career Mentor</div>
+                        <h3 class="text-base font-bold text-gray-800">Navya M N</h3>
+                        <p class="text-xs text-gray-500 italic">Founder, Finnfluent Education</p>
+                        
+                        <div class="mt-4 pt-4 border-t border-gray-200 text-xs text-gray-600 text-justify leading-relaxed">
+                            "Don't select a stream simply because a relative or friend recommended it. Let's use clean data to look behind the curtain and identify your true horizontal and vertical skill advantages."
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- HIGH-CONVERSION LEAD GATEWAY DIALOG (Secure validation checks) -->
+        <section id="lead-gateway-panel" class="hidden max-w-2xl mx-auto w-full bg-white rounded-xl border border-gray-200/85 p-6 md:p-8 shadow-lg no-print">
+            <div class="text-center space-y-4 mb-6">
+                <div class="w-12 h-12 rounded-full bg-emerald-50 text-emerald-800 flex items-center justify-center mx-auto text-xl font-bold">
+📋
+</div>
+                <h3 class="text-2xl font-extrabold text-gray-800 tracking-tight">Begin Your Personal Assessment</h3>
+                <p class="text-xs text-gray-500 leading-relaxed">
+                    Provide your authentic contact information to start. These details secure your score portfolio and allow customized A4 print configurations.
+                </p>
+            </div>
+            
+            <form id="lead-form" onsubmit="handleLeadSubmit(event)" class="space-y-4 text-xs">
+                <!-- Name Block -->
+                <div>
+                    <div class="flex justify-between items-center mb-1">
+                        <label class="block font-bold text-gray-700 uppercase tracking-wider">Student Name *</label>
+                        <span id="name-validation-msg" class="text-[10px] font-bold text-red-500 hidden">Minimum 3 characters (letters only)</span>
+                    </div>
+                    <input type="text" id="lead-name" required oninput="validateNameInput()" placeholder="Enter student's full name" class="w-full px-4 py-3.5 rounded-lg border border-gray-250 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent text-gray-800 transition-all">
+                </div>
+                <!-- Class / Phone Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <div class="flex justify-between items-center mb-1">
+                            <label class="block font-bold text-gray-700 uppercase tracking-wider">Class *</label>
+                            <span id="class-validation-msg" class="text-[10px] font-bold text-red-500 hidden">Please make a selection</span>
+                        </div>
+                        <select id="lead-class" required onchange="validateClassInput()" class="w-full px-4 py-3.5 rounded-lg border border-gray-250 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent text-gray-800 bg-white transition-all">
+                            <option value="" disabled selected>Select class of study</option>
+                            <option value="10th">10th Standard</option>
+                            <option value="11th">11th Standard</option>
+                            <option value="12th">12th Standard</option>
+                            <option value="UG Year 1">UG Year 1</option>
+                            <option value="UG Year 2">UG Year 2</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-center mb-1">
+                            <label class="block font-bold text-gray-700 uppercase tracking-wider">WhatsApp Number *</label>
+                            <span id="phone-validation-msg" class="text-[10px] font-bold text-red-500 hidden">Enter authentic 10-digit Indian mobile</span>
+                        </div>
+                        <input type="tel" id="lead-phone" required oninput="validatePhoneInput()" placeholder="10-digit mobile number" class="w-full px-4 py-3.5 rounded-lg border border-gray-250 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent text-gray-800 transition-all">
+                    </div>
+                </div>
+                <!-- Email Block -->
+                <div>
+                    <div class="flex justify-between items-center mb-1">
+                        <label class="block font-bold text-gray-700 uppercase tracking-wider">Email Address *</label>
+                        <span id="email-validation-msg" class="text-[10px] font-bold text-red-500 hidden">Provide a valid email address</span>
+                    </div>
+                    <input type="email" id="lead-email" required oninput="validateEmailInput()" placeholder="Enter active email (e.g. name@domain.com)" class="w-full px-4 py-3.5 rounded-lg border border-gray-250 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent text-gray-800 transition-all">
+                </div>
+                <!-- Form-level validation information -->
+                <div class="p-3 bg-slate-50 border border-slate-200 rounded-lg text-[10px] text-gray-500 flex gap-2 items-start mt-2">
+                    <span class="text-emerald-600 font-extrabold text-sm leading-none">
+ℹ
+</span>
+                    <span>To avoid junk records, standard test characters, placeholder emails, repeating sequences, or invalid formats are automatically rejected by our server.</span>
+                </div>
+                <button type="submit" id="btn-submit-lead" disabled class="w-full py-4 rounded-lg font-bold text-gray-400 bg-gray-200 cursor-not-allowed transition-all flex items-center justify-center gap-2 mt-4 shadow">
+                    Start Assessment Setup
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+                </button>
+            </form>
+        </section>
+        <!-- MAIN ENGINE SCREEN GRID -->
+        <div id="engine-panel" class="hidden w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-start no-print">
+            
+            <!-- Left Side: Interactive Blind Question Cards -->
+            <div class="lg:col-span-8 bg-white border border-gray-200/60 rounded-xl p-6 md:p-8 shadow-sm">
+                
+                <!-- Dynamic Phase Identification Header -->
+                <div class="mb-5 flex items-center justify-between border-b border-gray-150 pb-4">
+                    <div>
+                        <span id="phase-badge" class="text-xs font-black text-emerald-800 uppercase tracking-widest">Phase 1/4</span>
+                        <h3 id="phase-name" class="text-lg font-bold text-gray-800 mt-0.5">Academic Comfort Check</h3>
+                    </div>
+                    <span id="question-index-label" class="text-xs text-gray-400 font-bold">Question 1 of 28</span>
+                </div>
+                <!-- Custom Progress Bar Line -->
+                <div class="w-full bg-gray-100 h-1.5 rounded-full mb-8 overflow-hidden">
+                    <div id="progress-bar-fill" class="h-full bg-emerald-400 rounded-full transition-all duration-300" style="width: 0%"></div>
+                </div>
+                <!-- Blind Question Prompt Structure -->
+                <div class="space-y-6">
+                    <div class="p-6 rounded-xl bg-gray-50/70 border border-gray-200/80">
+                        <h4 id="display-question-text" class="text-sm md:text-base font-bold text-gray-800 leading-relaxed">Loading questions...</h4>
+                    </div>
+                    <!-- 1-6 Selection Matrix Buttons -->
+                    <div class="pt-2">
+                        <span class="text-xs font-black text-gray-400 tracking-wider uppercase block mb-3">Choose your rating score</span>
+                        <div class="grid grid-cols-6 gap-2 sm:gap-3">
+                            <button onclick="handleSelection(1)" id="choice-1" class="rating-btn py-3 rounded-lg border border-gray-200 font-bold text-sm text-gray-600 bg-white hover:bg-gray-50 hover:border-gray-300 flex items-center justify-center">1</button>
+                            <button onclick="handleSelection(2)" id="choice-2" class="rating-btn py-3 rounded-lg border border-gray-200 font-bold text-sm text-gray-600 bg-white hover:bg-gray-50 hover:border-gray-300 flex items-center justify-center">2</button>
+                            <button onclick="handleSelection(3)" id="choice-3" class="rating-btn py-3 rounded-lg border border-gray-200 font-bold text-sm text-gray-600 bg-white hover:bg-gray-50 hover:border-gray-300 flex items-center justify-center">3</button>
+                            <button onclick="handleSelection(4)" id="choice-4" class="rating-btn py-3 rounded-lg border border-gray-200 font-bold text-sm text-gray-600 bg-white hover:bg-gray-50 hover:border-gray-300 flex items-center justify-center">4</button>
+                            <button onclick="handleSelection(5)" id="choice-5" class="rating-btn py-3 rounded-lg border border-gray-200 font-bold text-sm text-gray-600 bg-white hover:bg-gray-50 hover:border-gray-300 flex items-center justify-center">5</button>
+                            <button onclick="handleSelection(6)" id="choice-6" class="rating-btn py-3 rounded-lg border border-gray-200 font-bold text-sm text-gray-600 bg-white hover:bg-gray-50 hover:border-gray-300 flex items-center justify-center">6</button>
+                        </div>
+                        <div class="flex justify-between text-[11px] text-gray-400 mt-2 font-medium tracking-wide">
+                            <span>Not Me / Strongly Disagree</span>
+                            <span>Totally Me / Strongly Agree</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Nav Action Footer -->
+                <div class="flex justify-between items-center mt-10 pt-6 border-t border-gray-150">
+                    <button onclick="stepBackward()" id="nav-back-btn" class="px-4 py-2 rounded-lg border border-gray-200 hover:bg-gray-50 text-xs font-bold text-gray-500 flex items-center gap-1 transition-colors">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" /></svg>
+                        Back
+                    </button>
+                    <button onclick="stepForward()" id="nav-next-btn" class="px-5 py-2.5 rounded-lg text-xs font-bold text-gray-800 flex items-center gap-1 transition-opacity" style="background-color: #A8D5BA;">
+                        Next Question
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" /></svg>
+                    </button>
+                </div>
+            </div>
+            <!-- Right Side: Sidebar Live Calculations Panel -->
+            <div class="lg:col-span-4 space-y-6 w-full">
+                
+                <!-- Live T-Profile Runway Card -->
+                <div class="bg-white border border-gray-200/60 rounded-xl p-5 shadow-sm">
+                    <h4 class="text-xs font-black text-gray-400 uppercase tracking-widest mb-4">Live T-Profile Tracker</h4>
+                    
+                    <div class="space-y-4">
+                        <!-- Science Progress tracking -->
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold mb-1">
+                                <span class="text-gray-700">
+🔬
+ Science Vertical</span>
+                                <span id="sidebar-val-science" class="text-gray-500 font-bold">0.0/20</span>
+                            </div>
+                            <div class="w-full bg-gray-100 h-2 rounded-full overflow-hidden">
+                                <div id="sidebar-bar-science" class="h-full bg-emerald-400 rounded-full transition-all duration-300" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <!-- Commerce Progress tracking -->
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold mb-1">
+                                <span class="text-gray-700">
+📈
+ Commerce Vertical</span>
+                                <span id="sidebar-val-commerce" class="text-gray-500 font-bold">0.0/20</span>
+                            </div>
+                            <div class="w-full bg-gray-100 h-2 rounded-full overflow-hidden">
+                                <div id="sidebar-bar-commerce" class="h-full bg-emerald-400 rounded-full transition-all duration-300" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <!-- Humanities Progress tracking -->
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold mb-1">
+                                <span class="text-gray-700">
+🎨
+ Humanities Vertical</span>
+                                <span id="sidebar-val-humanities" class="text-gray-500 font-bold">0.0/20</span>
+                            </div>
+                            <div class="w-full bg-gray-100 h-2 rounded-full overflow-hidden">
+                                <div id="sidebar-bar-humanities" class="h-full bg-emerald-400 rounded-full transition-all duration-300" style="width: 0%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Live Skill Moats Gauge card -->
+                <div id="sidebar-rings-panel" class="bg-white border border-gray-200/60 rounded-xl p-5 shadow-sm opacity-40 transition-opacity duration-300">
+                    <h4 class="text-xs font-black text-gray-400 uppercase tracking-widest mb-3">Human Moat Capacities</h4>
+                    <p class="text-[10px] text-gray-400 mb-4 leading-normal">Activates dynamically during Phase 3 calculations.</p>
+                    
+                    <div class="grid grid-cols-3 gap-2 text-center">
+                        <!-- Empathy Circle -->
+                        <div class="flex flex-col items-center">
+                            <div class="relative w-12 h-12 flex items-center justify-center">
+                                <svg class="w-full h-full transform -rotate-90" viewBox="0 0 56 56">
+                                    <circle cx="28" cy="28" r="23" stroke="#f1f5f9" stroke-width="3.5" fill="transparent" />
+                                    <circle id="ring-emp" cx="28" cy="28" r="23" stroke="#FFD4B4" stroke-width="4" stroke-dasharray="144.5" stroke-dashoffset="144.5" fill="transparent" class="progress-ring-circle" />
+                                </svg>
+                                <span id="ring-txt-emp" class="absolute text-[10px] font-bold text-gray-700">0%</span>
+                            </div>
+                            <span class="text-[9px] font-bold text-gray-400 mt-1.5 uppercase">Empathy</span>
+                        </div>
+                        <!-- Communication Circle -->
+                        <div class="flex flex-col items-center">
+                            <div class="relative w-12 h-12 flex items-center justify-center">
+                                <svg class="w-full h-full transform -rotate-90" viewBox="0 0 56 56">
+                                    <circle cx="28" cy="28" r="23" stroke="#f1f5f9" stroke-width="3.5" fill="transparent" />
+                                    <circle id="ring-comm" cx="28" cy="28" r="23" stroke="#B4C7E7" stroke-width="4" stroke-dasharray="144.5" stroke-dashoffset="144.5" fill="transparent" class="progress-ring-circle" />
+                                </svg>
+                                <span id="ring-txt-comm" class="absolute text-[10px] font-bold text-gray-700">0%</span>
+                            </div>
+                            <span class="text-[9px] font-bold text-gray-400 mt-1.5 uppercase">Comms</span>
+                        </div>
+                        <!-- Systems Thinking Circle -->
+                        <div class="flex flex-col items-center">
+                            <div class="relative w-12 h-12 flex items-center justify-center">
+                                <svg class="w-full h-full transform -rotate-90" viewBox="0 0 56 56">
+                                    <circle cx="28" cy="28" r="23" stroke="#f1f5f9" stroke-width="3.5" fill="transparent" />
+                                    <circle id="ring-sys" cx="28" cy="28" r="23" stroke="#D4C5F9" stroke-width="4" stroke-dasharray="144.5" stroke-dashoffset="144.5" fill="transparent" class="progress-ring-circle" />
+                                </svg>
+                                <span id="ring-txt-sys" class="absolute text-[10px] font-bold text-gray-700">0%</span>
+                            </div>
+                            <span class="text-[9px] font-bold text-gray-400 mt-1.5 uppercase">Systems</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- COMPILED RESULTS FRAMEWORK INTERFACE -->
+        <div id="results-panel" class="hidden w-full space-y-8">
+            
+            <div class="flex justify-center border-b border-gray-200 pb-4 no-print gap-3">
+                <button id="tab-student-btn" onclick="toggleDashboardTabs('student')" class="px-5 py-2.5 rounded-lg text-xs font-bold transition-all shadow-sm" style="background-color: #A8D5BA; color: #2D3436;">
+                    
+🎯
+ Student Roadmap View
+                </button>
+                <button id="tab-parent-btn" onclick="toggleDashboardTabs('parent')" class="px-5 py-2.5 rounded-lg text-xs font-bold transition-all bg-white border border-gray-200 text-gray-500 hover:bg-gray-50">
+                    
+👨
+‍
+👩
+‍
+👦
+ Parent Summary Briefing
+                </button>
+            </div>
+            <!-- VIEW 1: COMPLETE STUDENT ROADMAP OVERVIEW -->
+            <div id="dashboard-student-view" class="space-y-8 print-layout">
+                
+                <!-- Large Verdict Banner -->
+                <div class="p-6 md:p-8 rounded-xl bg-gradient-to-r from-emerald-50 to-teal-50/30 border border-emerald-200/80 shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+                    <div>
+                        <span class="text-[10px] font-black uppercase tracking-widest text-emerald-800">Your Computed Stream Trajectory</span>
+                        <h2 id="verdict-banner-title" class="text-3xl font-extrabold text-gray-800 tracking-tight mt-0.5">SCIENCE</h2>
+                        <p class="text-xs text-gray-500 mt-1">Calculated using structural alignment criteria measuring interests, work profile metrics, and non-automatable skills.</p>
+                        
+                        <!-- Dynamic Student Identity Signifier -->
+                        <div id="print-user-meta" class="mt-4 pt-3 border-t border-emerald-100 flex flex-wrap gap-4 text-xs font-semibold text-emerald-800 font-bold">
+                            <span>Student Name: <span id="meta-student-name" class="font-extrabold text-gray-800">--</span></span>
+                            <span>Class: <span id="meta-student-class" class="font-extrabold text-gray-800">--</span></span>
+                        </div>
+                    </div>
+                    <div class="flex gap-2 w-full md:w-auto no-print">
+                        <button onclick="window.print()" class="flex-1 md:flex-none px-4 py-2.5 rounded-lg border border-gray-200 bg-white hover:bg-gray-50 text-xs font-bold text-gray-600 flex items-center justify-center gap-1.5 shadow-sm">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" /></svg>
+                            Print Report Dossier
+                        </button>
+                        <button onclick="dispatchLeadEmailAndWhatsApp()" class="flex-1 md:flex-none px-4 py-2.5 rounded-lg text-xs font-bold text-gray-800 flex items-center justify-center gap-1.5 shadow-sm bg-emerald-100" style="background-color: #A8D5BA;">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                            Dispatch Score Email
+                        </button>
+                    </div>
+                </div>
+                <div class="p-6 rounded-xl border-2 border-emerald-400 bg-emerald-50 shadow-md">
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                        <div>
+                            <h3 class="text-sm font-bold text-emerald-900">Ready for Deeper Insights?</h3>
+                            <p class="text-xs text-emerald-800 mt-1">Take our comprehensive 5D Psychometric Assessment for personalized career recommendations, skill gap analysis, and one-on-one mentorship planning.</p>
+                        </div>
+                        <a href="https://finnfluent.edumilestones.com/" target="_blank" class="flex-shrink-0 px-5 py-3 rounded-lg font-bold text-white text-xs flex items-center justify-center gap-2 shadow-md transition-transform hover:scale-105" style="background-color: #A8D5BA;">
+                            Take 5D Assessment
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" /></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white border border-gray-200/60 rounded-xl p-6 shadow-sm print-card">
+                        <h3 class="text-xs font-black text-gray-400 uppercase tracking-widest mb-4">Why This Path Fits Your Profile</h3>
+                        <ul id="verdict-points-list" class="space-y-3.5 text-xs text-gray-600 leading-relaxed">
+                        </ul>
+                    </div>
+                    <div class="bg-white border border-gray-200/60 rounded-xl p-6 shadow-sm print-card">
+                        <h3 class="text-xs font-black text-gray-400 uppercase tracking-widest mb-4">Advanced Pathway Combinations</h3>
+                        <div class="space-y-4 text-xs">
+                            <div>
+                                <span id="alt-title-1" class="font-bold text-gray-700 block">Natural Combination: SCIENCE + COMMERCE</span>
+                                <p class="text-[11px] text-gray-500 mt-1 leading-relaxed">FinTech, Data Analytics, Business Strategy roles where your technical foundation plus business thinking creates competitive advantage. Leaders in this combination drive innovation in financial technology and investment strategy.</p>
+                            </div>
+                            <div>
+                                <span id="alt-title-2" class="font-bold text-gray-700 block">Natural Combination: SCIENCE + HUMANITIES</span>
+                                <p class="text-[11px] text-gray-500 mt-1 leading-relaxed">Science Communication, Policy Advocacy, Tech Writing roles where your expertise plus communication skills drive impact. This combination is increasingly valued for translating complex research into policy and public understanding.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white border border-gray-200/60 rounded-xl p-6 shadow-sm print-card">
+                    <h3 class="text-xs font-black text-gray-400 uppercase tracking-widest mb-4">Final 15-Year T-Profile Standings</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="p-4 rounded-lg bg-gray-50 border border-gray-150">
+                            <div class="flex justify-between items-center text-xs font-bold mb-2">
+                                <span>
+🔬
+ Science Domain</span>
+                                <span id="final-txt-science" class="text-emerald-800">0.0/20</span>
+                            </div>
+                            <div class="w-full bg-gray-200 h-2 rounded-full overflow-hidden">
+                                <div id="final-bar-science" class="h-full bg-emerald-400 rounded-full" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-lg bg-gray-50 border border-gray-150">
+                            <div class="flex justify-between items-center text-xs font-bold mb-2">
+                                <span>
+📈
+ Commerce Domain</span>
+                                <span id="final-txt-commerce" class="text-emerald-800">0.0/20</span>
+                            </div>
+                            <div class="w-full bg-gray-200 h-2 rounded-full overflow-hidden">
+                                <div id="final-bar-commerce" class="h-full bg-emerald-400 rounded-full" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-lg bg-gray-50 border border-gray-150">
+                            <div class="flex justify-between items-center text-xs font-bold mb-2">
+                                <span>
+🎨
+ Humanities Domain</span>
+                                <span id="final-txt-humanities" class="text-emerald-800">0.0/20</span>
+                            </div>
+                            <div class="w-full bg-gray-200 h-2 rounded-full overflow-hidden">
+                                <div id="final-bar-humanities" class="h-full bg-emerald-400 rounded-full" style="width: 0%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white border border-gray-200/60 rounded-xl p-6 shadow-sm print-card">
+                    <h3 class="text-xs font-black text-gray-400 uppercase tracking-widest mb-2">Your T-Shaped Skill Framework</h3>
+                    <p class="text-[10px] text-gray-500 mb-6 leading-relaxed">The horizontal bar represents cross-functional soft skills that apply across all streams. The vertical bar is your deep domain expertise in your chosen stream.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                        <div class="p-4 rounded-xl bg-gray-50 border border-gray-150 flex flex-col items-center">
+                            <div class="relative w-16 h-16 flex items-center justify-center">
+                                <svg class="w-full h-full transform -rotate-90" viewBox="0 0 80 80">
+                                    <circle cx="40" cy="40" r="34" stroke="#e2e8f0" stroke-width="4.5" fill="transparent" />
+                                    <circle id="final-ring-emp" cx="40" cy="40" r="34" stroke="#FFD4B4" stroke-width="5.5" stroke-dasharray="213.6" stroke-dashoffset="213.6" fill="transparent" />
+                                </svg>
+                                <span id="final-txt-emp" class="absolute text-xs font-bold text-gray-800">0%</span>
+                            </div>
+                            <span class="text-xs font-bold text-gray-700 mt-3 uppercase tracking-wider">Empathy</span>
+                            <p class="text-[10px] text-gray-600 mt-1 leading-normal font-semibold">Understanding people</p>
+                            <p class="text-[10px] text-gray-400 mt-1 leading-normal">Ability to connect with users, stakeholders, and teams authentically.</p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-gray-50 border border-gray-150 flex flex-col items-center">
+                            <div class="relative w-16 h-16 flex items-center justify-center">
+                                <svg class="w-full h-full transform -rotate-90" viewBox="0 0 80 80">
+                                    <circle cx="40" cy="40" r="34" stroke="#e2e8f0" stroke-width="4.5" fill="transparent" />
+                                    <circle id="final-ring-comm" cx="40" cy="40" r="34" stroke="#B4C7E7" stroke-width="5.5" stroke-dasharray="213.6" stroke-dashoffset="213.6" fill="transparent" />
+                                </svg>
+                                <span id="final-txt-comm" class="absolute text-xs font-bold text-gray-800">0%</span>
+                            </div>
+                            <span class="text-xs font-bold text-gray-700 mt-3 uppercase tracking-wider">Communication</span>
+                            <p class="text-[10px] text-gray-600 mt-1 leading-normal font-semibold">Explaining YOUR expertise</p>
+                            <p class="text-[10px] text-gray-400 mt-1 leading-normal">Breaking down your stream knowledge into clear, compelling narratives.</p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-gray-50 border border-gray-150 flex flex-col items-center">
+                            <div class="relative w-16 h-16 flex items-center justify-center">
+                                <svg class="w-full h-full transform -rotate-90" viewBox="0 0 80 80">
+                                    <circle cx="40" cy="40" r="34" stroke="#e2e8f0" stroke-width="4.5" fill="transparent" />
+                                    <circle id="final-ring-sys" cx="40" cy="40" r="34" stroke="#D4C5F9" stroke-width="5.5" stroke-dasharray="213.6" stroke-dashoffset="213.6" fill="transparent" />
+                                </svg>
+                                <span id="final-txt-sys" class="absolute text-xs font-bold text-gray-800">0%</span>
+                            </div>
+                            <span class="text-xs font-bold text-gray-700 mt-3 uppercase tracking-wider">Systems Thinking</span>
+                            <p class="text-[10px] text-gray-600 mt-1 leading-normal font-semibold">Solving problems in YOUR field</p>
+                            <p class="text-[10px] text-gray-400 mt-1 leading-normal">Connecting domain patterns and predicting consequences in your stream.</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 p-4 rounded-lg bg-emerald-50 border border-emerald-200">
+                        <p class="text-[10px] text-emerald-900 leading-relaxed"><strong>Deep Domain Expertise (Your Vertical Bar):</strong> Mastery in your chosen stream (Science/Commerce/Humanities) - the specialized knowledge that makes you uniquely valuable.</p>
+                    </div>
+                </div>
+                <div class="space-y-8 page-break">
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div class="bg-white border border-gray-200/60 rounded-xl p-6 shadow-sm flex flex-col print-card">
+                            <h3 class="text-xs font-black text-gray-400 uppercase tracking-widest mb-4">Diagram 1: Stream + Skills Framework</h3>
+                            <div class="flex-1 flex flex-col items-center justify-center py-4">
+                                <div class="relative w-64 h-36 flex items-center justify-center">
+                                    <div class="absolute left-4 w-28 h-28 rounded-full border border-emerald-200 opacity-60 mix-blend-multiply flex items-center justify-center text-[10px] font-bold text-emerald-900 shadow-inner" style="background-color: #A8D5BA; transform: translateX(-10px);">Stream</div>
+                                    <div class="absolute right-4 w-28 h-28 rounded-full border border-blue-200 opacity-60 mix-blend-multiply flex items-center justify-center text-[10px] font-bold text-blue-900 shadow-inner" style="background-color: #B4C7E7; transform: translateX(10px);">Skills</div>
+                                    <div class="absolute bottom-0 w-28 h-28 rounded-full border border-purple-200 opacity-60 mix-blend-multiply flex items-center justify-center text-[9px] font-bold text-purple-900 shadow-inner" style="background-color: #D4C5F9; transform: translateY(-5px);">You</div>
+                                    <div class="absolute z-10 text-[9px] font-black uppercase text-center text-gray-900 bg-white border border-gray-200 px-1.5 py-0.5 rounded shadow-sm" style="bottom: 32px;">
+🎯
+ Future-Proof Niche</div>
+                                </div>
+                                <p class="text-[11px] text-gray-500 text-center leading-relaxed mt-4">
+                                    A base degree alone commands baseline valuation. True value lies at the intersection of stream mechanics, digital competency skills, and your personal soft strengths.
+                                </p>
+                                <div class="mt-4 p-3 bg-blue-50 border border-blue-200 rounded-lg text-[10px] text-gray-600 text-center leading-relaxed">
+                                    <strong>You</strong> represents the intersection of your natural stream aptitude and professional skill development. Your unique position here is what creates your competitive advantage in the job market.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white border border-gray-200/60 rounded-xl p-6 shadow-sm flex flex-col print-card">
+                            <h3 class="text-xs font-black text-gray-400 uppercase tracking-widest mb-4">Diagram 2: Recommended NEP 2020 Minors</h3>
+                            <div class="flex-1 flex flex-col justify-center space-y-3" id="nep-checkboxes-box">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div class="bg-white border border-gray-200/60 rounded-xl p-6 shadow-sm flex flex-col print-card">
+                            <h3 class="text-xs font-black text-gray-400 uppercase tracking-widest mb-4">Diagram 3: Core Stacking Layers</h3>
+                            <div class="flex-1 flex flex-col justify-center space-y-3 py-2">
+                                <div class="p-3 rounded-lg border border-teal-100 bg-teal-50/20 text-xs">
+                                    <strong class="text-teal-950 block">Layer 1: The Technical Layer</strong>
+                                    <span class="text-[10px] text-teal-700 block mt-0.5">Master your stream's core technical knowledge - the vertical depth that makes you irreplaceable in your field. Build foundations in your chosen domain.</span>
+                                </div>
+                                <div class="p-3 rounded-lg border border-indigo-100 bg-indigo-50/20 text-xs">
+                                    <strong class="text-indigo-950 block">Layer 2: The Human Moat Layer</strong>
+                                    <span class="text-[10px] text-indigo-700 block mt-0.5">Develop cross-functional soft skills - the horizontal abilities that make you valuable across multiple industries. Critical thinking, communication, empathy, and systems thinking.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white border border-gray-200/60 rounded-xl p-6 shadow-sm flex flex-col print-card">
+                            <h3 class="text-xs font-black text-gray-400 uppercase tracking-widest mb-4">Diagram 4: Your 15-Year Horizon Timeline</h3>
+                            <div class="flex-1 flex flex-col justify-center pl-4 py-2">
+                                <div class="border-l-2 border-emerald-200 pl-4 space-y-3.5 text-xs relative">
+                                    <div class="relative">
+                                        <span class="absolute -left-[21px] top-0.5 w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+                                        <strong>Years 1–2: Foundation</strong> - Build your core skills (e.g., if Science: learn programming and lab work; if Commerce: understand business fundamentals and financial systems).
+                                    </div>
+                                    <div class="relative">
+                                        <span class="absolute -left-[21px] top-0.5 w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+                                        <strong>Years 3–5: Specialization</strong> - Gain expertise (e.g., specialize in AI, finance, content creation, psychology, or your chosen field). Build real projects and internship portfolio.
+                                    </div>
+                                    <div class="relative">
+                                        <span class="absolute -left-[21px] top-0.5 w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+                                        <strong>Years 6–10: High-Value Hybrid</strong> - Combine technical expertise with leadership (e.g., become a tech lead, startup founder, domain expert, or consultant).
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white border border-gray-200/60 rounded-xl p-6 shadow-sm print-card">
+                    <h3 class="text-xs font-black text-gray-400 uppercase tracking-widest mb-3">Your Action Checkpoints</h3>
+                    <ol id="student-actions-list" class="space-y-3 text-xs text-gray-600 pl-4 list-decimal leading-relaxed">
+                    </ol>
+                </div>
+                <!-- NEW CORE VALUE CAPTURE: ADVISOR DISPATCHER METRIC -->
+                <div class="bg-white border border-gray-200/60 rounded-xl p-6 shadow-sm print-card">
+                    <h3 class="text-xs font-black text-blue-600 uppercase tracking-widest mb-2 flex items-center gap-1.5">
+
+ℹ
+️ The Parent-Student Alignment Note
+                    </h3>
+                    <p class="text-xs text-gray-600 leading-relaxed text-justify">
+                        Research shows that <strong>83% of Indian high school families</strong> face tension when students and parents have different stream preferences. Whether you choose Science, Commerce, or Humanities, the key is alignment. All streams lead to thriving careers - the best choice is the one that matches YOUR strengths and interests. We recommend having an open family discussion backed by this assessment data and mapping a customized, financially sustainable 15-year career plan.
+                    </p>
+                </div>
+                <!-- PHOTO REGION FOR SIGNATURE BLOCK -->
+                <div class="bg-white border border-gray-200/60 rounded-xl p-6 shadow-sm no-print">
+                    <div class="flex flex-col sm:flex-row items-center gap-6">
+                        
+                        <div class="w-16 h-16 rounded-full bg-slate-100 border border-emerald-200 flex items-center justify-center shrink-0 overflow-hidden">
+                            <svg class="w-8 h-8 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                            </svg>
+                        </div>
+                        
+                        <div class="flex-1 text-center sm:text-left">
+                            <h4 class="text-sm font-bold text-gray-800">Need an Individual 15-Year Financial & Degree ROI Audit?</h4>
+                            <p class="text-xs text-gray-500 mt-0.5">We can configure precise break-even trajectories, calculate input costs, and choose specific university majors under a customized 1:1 framework session.</p>
+                        </div>
+                        <a href="https://wa.me/918309143339" target="_blank" class="w-full sm:w-auto text-center px-4 py-2.5 rounded-lg text-xs font-bold text-gray-900 transition-colors shadow-sm" style="background-color: #A8D5BA;">
+                            Message Navya
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- VIEW 2: SIMPLIFIED PARENT SUMMARY PAGE -->
+            <div id="dashboard-parent-view" class="hidden space-y-8 print-layout">
+                
+                <div class="p-6 md:p-8 rounded-xl bg-gradient-to-r from-blue-50 to-indigo-50/20 border border-blue-200/80 shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+                    <div>
+                        <span class="text-[10px] font-black uppercase tracking-widest text-blue-800">Parent Strategic Briefing</span>
+                        <h2 id="parent-verdict-title" class="text-3xl font-extrabold text-gray-800 tracking-tight mt-0.5">SCIENCE</h2>
+                        <p class="text-xs text-gray-500 mt-1">A simplified analysis framework focused on capital deployment and long-term career risk protection parameters.</p>
+                    </div>
+                    <button onclick="window.print()" class="w-full md:w-auto px-4 py-2.5 rounded-lg border border-gray-200 bg-white hover:bg-gray-50 text-xs font-bold text-gray-600 flex items-center justify-center gap-1.5 shadow-sm no-print">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" /></svg>
+                        Print Summary Document
+                    </button>
+                </div>
+                <div class="bg-white border border-gray-200/60 rounded-xl p-6 md:p-8 shadow-sm space-y-6 print-card">
+                    <h3 class="text-xs font-black text-gray-400 uppercase tracking-widest">Key Investment Findings For Your Household</h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs text-gray-600 leading-relaxed">
+                        <div class="p-4 rounded-lg bg-gray-50 border border-gray-100">
+                            <strong class="text-gray-800 block mb-1">Aptitude Validation Matrix</strong>
+                            <p id="parent-aptitude-verdict-text">The child shows solid baseline capabilities in quantitative logic and experimental parameters.</p>
+                        </div>
+                        <div class="p-4 rounded-lg bg-gray-50 border border-gray-100">
+                            <strong class="text-gray-800 block mb-1">Skill-Stacking Requirements</strong>
+                            <p id="parent-skills-upgrade-text">Ensure the student pairs their primary stream major with interdisciplinary technical minors to preserve capital value.</p>
+                        </div>
+                        <div class="p-4 rounded-lg bg-gray-50 border border-gray-100">
+                            <strong class="text-gray-800 block mb-1">15-Year Trajectory Growth</strong>
+                            <p>Strategic positioning curves map a progression path transitioning from a field technical specialist into corporate leadership segments by 2040.</p>
+                        </div>
+                        <div class="p-4 rounded-lg bg-gray-50 border border-gray-100">
+                            <strong class="text-gray-800 block mb-1">Degree Investment Safety Node</strong>
+                            <p>Calculated career paths maintain an estimated 5-to-8 year complete capital break-even matrix curve when mapped against tuition fees baseline.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white border border-gray-200/60 rounded-xl p-6 shadow-sm print-card">
+                    <h3 class="text-xs font-black text-gray-400 uppercase tracking-widest mb-4">Recommended Next Checklist Steps for Parents</h3>
+                    <ol class="space-y-3 text-xs text-gray-600 pl-4 list-decimal leading-relaxed">
+                        <li>Discuss these suitability results as a supportive family, listening for structural patterns.</li>
+                        <li>Review the flexible interdisciplinary subject configurations offered at your child's target school or board.</li>
+                        <li>Support your child in selecting an online certification course this summer to test their motivation velocity.</li>
+                        <li>Schedule an individual 60-minute Career ROI consultation with Navya M N to finalize financial architecture pipelines.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-150 py-6 px-6 mt-12 text-center text-xs text-gray-400 font-medium no-print">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <span>Designed by Navya | Career Coaching Workshop © 2026</span>
+            <div class="flex gap-4">
+                <a href="https://www.linkedin.com" target="_blank" class="hover:text-emerald-700 transition-colors">LinkedIn</a>
+                <span class="text-gray-200">|</span>
+                <a href="https://www.instagram.com" target="_blank" class="hover:text-emerald-700 transition-colors">Instagram</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Assessment JavaScript logic -->
+    <script>
+        // CONFIGURATION: IF YOU HAVE A GOOGLE APPS SCRIPT WEB APP ENDPOINT FOR YOUR GOOGLE SHEET, PASTE IT HERE:
+        // Example: "https://script.google.com/macros/s/XXXXX/exec"
+        const GOOGLE_SHEETS_WEBAPP_URL = "";
+        /*
+           GOOGLE APPS SCRIPT CODE TO PASTE IN YOUR GOOGLE SCRIPT EDITOR:
+           
+           function doPost(e) {
+             var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+             var data = JSON.parse(e.postData.contents);
+             sheet.appendRow([
+               new Date(), 
+               data.name, 
+               data.class, 
+               data.phone, 
+               data.email, 
+               data.verdict, 
+               data.science_score, 
+               data.commerce_score, 
+               data.humanities_score, 
+               JSON.stringify(data.answers)
+             ]);
+             return ContentService.createTextOutput(JSON.stringify({status: "success"})).setMimeType(ContentService.MimeType.JSON);
+           }
+        */
+        const coreQuestions = [
+            // PHASE 1: ACADEMIC COMFORT (Questions 1-7)
+            { id: "Q1", text: "I like breaking down complicated math puzzles or figuring out the hidden rules behind a logic problem.", group: "Science", phase: 1, title: "Academic Comfort Check" },
+            { id: "Q2", text: "I am fascinated by scientific experiments, biology systems, or understanding how machines work.", group: "Science", phase: 1, title: "Academic Comfort Check" },
+            { id: "Q3", text: "I enjoy reading about history, analyzing past world events, or exploring how human societies change.", group: "Humanities", phase: 1, title: "Academic Comfort Check" },
+            { id: "Q4", text: "I like tracking business case studies, stock market charts, or analyzing how local shops make a profit.", group: "Commerce", phase: 1, title: "Academic Comfort Check" },
+            { id: "Q5", text: "I love reading literature, writing essays, or learning new languages to explain an idea clearly.", group: "Humanities", phase: 1, title: "Academic Comfort Check" },
+            { id: "Q6", text: "I enjoy creative arts, drawing, graphic layouts, or composing background music templates.", group: "Humanities", phase: 1, title: "Academic Comfort Check" },
+            { id: "Q7", text: "I prefer structured school debates where I can use facts to prove a point over open group discussions.", group: "Humanities", phase: 1, title: "Academic Comfort Check" },
+            // PHASE 2: WORKING STYLE (Questions 8-14)
+            { id: "Q8", text: "When facing a big project, I naturally break it into tiny, manageable steps to solve it piece by piece.", group: "Science", phase: 2, title: "Operational Work Style Check" },
+            { id: "Q9", text: "I like managing personal savings budgets, planning event schedules, or organizing school group teams.", group: "Commerce", phase: 2, title: "Operational Work Style Check" },
+            { id: "Q10", text: "I am quick at spotting what another person is feeling or predicting what someone expects in a team setup.", group: "Humanities", phase: 2, title: "Operational Work Style Check" },
+            { id: "Q11", text: "I trust raw numbers, graphs, and clear experimental proof far more than a simple personal opinion.", group: "Science", phase: 2, title: "Operational Work Style Check" },
+            { id: "Q12", text: "I always look for faster shortcuts to complete a repetitive task or improve a team's step-by-step workflow.", group: "Commerce", phase: 2, title: "Operational Work Style Check" },
+            { id: "Q13", text: "I excel at taking deep, confusing textbook topics and rewriting them into simple, interesting summaries.", group: "Humanities", phase: 2, title: "Operational Work Style Check" },
+            { id: "Q14", text: "I perform best when operating inside highly structured instructions rather than guessing inside fluid situations.", group: "Control", phase: 2, title: "Operational Work Style Check" },
+            // PHASE 3: HUMAN MOAT (Questions 15-21)
+            { id: "Q15", text: "My classmates often come to me to settle personal arguments because they trust me to listen carefully.", group: "Empathy", phase: 3, title: "Human Moat Architecture" },
+            { id: "Q16", text: "I can easily explain confusing technical topics so that anyone in my family can understand it perfectly.", group: "Communication", phase: 3, title: "Human Moat Architecture" },
+            { id: "Q17", text: "I enjoy linking ideas together from completely different school subjects that most people treat as separated.", group: "Systems", phase: 3, title: "Human Moat Architecture" },
+            { id: "Q18", text: "I can easily see how a minor adjustment in a school rule will cause unforeseen problems somewhere else.", group: "Systems", phase: 3, title: "Human Moat Architecture" },
+            { id: "Q19", text: "I feel confident standing up to pitch an idea or deliver a presentation speech to an unfamiliar panel.", group: "Communication", phase: 3, title: "Human Moat Architecture" },
+            { id: "Q20", text: "I always try to understand a friend's emotional mood before trying to fix their logical problem.", group: "Empathy", phase: 3, title: "Human Moat Architecture" },
+            { id: "Q21", text: "I naturally step up to coordinate a project and enjoy taking full accountability for our final score.", group: "Communication", phase: 3, title: "Human Moat Architecture" },
+            // PHASE 4: 15-YEAR REALITY CHECK (Questions 22-28)
+            { id: "Q22", text: "I am willing to spend extra time learning new software packages to shield my future career from automation.", group: "Future", phase: 4, title: "15-Year Capital Horizons" },
+            { id: "Q23", text: "My ideal dream career involves building an independent startup platform or running my own company.", group: "Future", phase: 4, title: "15-Year Capital Horizons" },
+            { id: "Q24", text: "It is important that my future profession directly creates a positive impact on environmental or social systems.", group: "Future", phase: 4, title: "15-Year Capital Horizons" },
+            { id: "Q25", text: "I value predictable financial stability, regular increments, and clear job descriptions over high-risk paths.", group: "Future", phase: 4, title: "15-Year Capital Horizons" },
+            { id: "Q26", text: "I want a career that keeps changing, forcing me to pick up entirely new specialties every 3 to 5 years.", group: "Future", phase: 4, title: "15-Year Capital Horizons" },
+            { id: "Q27", text: "I am excited by the idea of leading international projects or managing teams across multiple time zones.", group: "Future", phase: 4, title: "15-Year Capital Horizons" },
+            { id: "Q28", text: "I am happy to let computing systems handle everyday data organization if it frees me to plan high-level decisions.", group: "Future", phase: 4, title: "15-Year Capital Horizons" }
+        ];
+        let activeIndex = 0;
+        let globalFormState = {}; // Storage dictionary: { Q1: score }
+        // Live Validation Logic variables
+        let isNameValid = false;
+        let isClassValid = false;
+        let isPhoneValid = false;
+        let isEmailValid = false;
+        // Load data on page load checks ( localStorage checking )
+        window.onload = function() {
+            // Check if results are encoded in query params
+            const params = new URLSearchParams(window.location.search);
+            const encodedResults = params.get('results');
+            if (encodedResults) {
+                try {
+                    const parsed = JSON.parse(atob(encodedResults));
+                    globalFormState = parsed;
+                    document.getElementById('welcome-panel').classList.add('hidden');
+                    document.getElementById('results-panel').classList.remove('hidden');
+                    
+                    // Recover meta fields
+                    document.getElementById('meta-student-name').innerText = localStorage.getItem('navya_user_name') || 'Guest';
+                    document.getElementById('meta-student-class').innerText = localStorage.getItem('navya_user_class') || 'Other';
+                    
+                    renderFinalDashboard();
+                } catch (e) {
+                    console.error("Failed to decode share credentials:", e);
+                }
+            } else {
+                const savedState = localStorage.getItem('navya_compass_state');
+                if (savedState) {
+                    globalFormState = JSON.parse(savedState);
+                }
+            }
+        };
+        // Strict Interactive Input Validations
+        function validateNameInput() {
+            const nameField = document.getElementById('lead-name');
+            const errorLabel = document.getElementById('name-validation-msg');
+            const cleanVal = nameField.value.trim();
+            // Name should be minimum 3 chars, letters and spaces only
+            const namePattern = /^[a-zA-Z\s]{3,50}$/;
+            if (namePattern.test(cleanVal)) {
+                nameField.classList.remove('border-red-400', 'ring-red-400');
+                nameField.classList.add('border-green-400', 'ring-green-400');
+                errorLabel.classList.add('hidden');
+                isNameValid = true;
+            } else {
+                nameField.classList.remove('border-green-400', 'ring-green-400');
+                nameField.classList.add('border-red-400', 'ring-red-400');
+                errorLabel.classList.remove('hidden');
+                isNameValid = false;
+            }
+            toggleSubmitButtonState();
+        }
+        function validateClassInput() {
+            const classField = document.getElementById('lead-class');
+            const errorLabel = document.getElementById('class-validation-msg');
+            
+            if (classField.value !== "") {
+                classField.classList.remove('border-red-400');
+                classField.classList.add('border-green-400');
+                errorLabel.classList.add('hidden');
+                isClassValid = true;
+            } else {
+                classField.classList.remove('border-green-400');
+                classField.classList.add('border-red-400');
+                errorLabel.classList.remove('hidden');
+                isClassValid = false;
+            }
+            toggleSubmitButtonState();
+        }
+        function validatePhoneInput() {
+            const phoneField = document.getElementById('lead-phone');
+            const errorLabel = document.getElementById('phone-validation-msg');
+            const rawVal = phoneField.value.replace(/\D/g, ''); // strip non-digits
+            phoneField.value = rawVal; // constrain input field
+            // Strict Indian Mobile pattern: starts with 6,7,8, or 9 followed by 9 digits
+            const phonePattern = /^[6-9]\d{9}$/;
+            // Anti-Fraud check: block repetitive digits (e.g. 9999999999) or easy sequential strings
+            const isRepetitive = /^(\d)\1{9}$/.test(rawVal);
+            const isSequential = "1234567890 0987654321 2345678901 9876543210 3456789012 8765432109 4567890123 7654321098 5678901234".includes(rawVal);
+            if (phonePattern.test(rawVal) && !isRepetitive && !isSequential) {
+                phoneField.classList.remove('border-red-400', 'ring-red-400');
+                phoneField.classList.add('border-green-400', 'ring-green-400');
+                errorLabel.classList.add('hidden');
+                isPhoneValid = true;
+            } else {
+                phoneField.classList.remove('border-green-400', 'ring-green-400');
+                phoneField.classList.add('border-red-400', 'ring-red-400');
+                errorLabel.classList.remove('hidden');
+                isPhoneValid = false;
+            }
+            toggleSubmitButtonState();
+        }
+        function validateEmailInput() {
+            const emailField = document.getElementById('lead-email');
+            const errorLabel = document.getElementById('email-validation-msg');
+            const rawVal = emailField.value.trim().toLowerCase();
+            // Strict RFC-compliant regex
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            
+            // Block common fake placeholder handles
+            const isFakeDomain = rawVal.endsWith("@test.com") || rawVal.endsWith("@example.com") || rawVal.endsWith("@abc.com") || rawVal.endsWith("@domain.com") || rawVal.startsWith("abc@") || rawVal.startsWith("test@");
+            if (emailPattern.test(rawVal) && !isFakeDomain) {
+                emailField.classList.remove('border-red-400', 'ring-red-400');
+                emailField.classList.add('border-green-400', 'ring-green-400');
+                errorLabel.classList.add('hidden');
+                isEmailValid = true;
+            } else {
+                emailField.classList.remove('border-green-400', 'ring-green-400');
+                emailField.classList.add('border-red-400', 'ring-red-400');
+                errorLabel.classList.remove('hidden');
+                isEmailValid = false;
+            }
+            toggleSubmitButtonState();
+        }
+        function toggleSubmitButtonState() {
+            const submitBtn = document.getElementById('btn-submit-lead');
+            if (isNameValid && isClassValid && isPhoneValid && isEmailValid) {
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('bg-gray-200', 'text-gray-400', 'cursor-not-allowed');
+                submitBtn.classList.add('text-gray-900', 'cursor-pointer');
+                submitBtn.style.backgroundColor = '#A8D5BA';
+            } else {
+                submitBtn.disabled = true;
+                submitBtn.classList.remove('text-gray-900', 'cursor-pointer');
+                submitBtn.classList.add('bg-gray-200', 'text-gray-400', 'cursor-not-allowed');
+                submitBtn.style.backgroundColor = '';
+            }
+        }
+        // STEP 1: Launch Registration form (upfront Lead gate)
+        function startRegistrationFlow() {
+            document.getElementById('welcome-panel').classList.add('hidden');
+            document.getElementById('lead-gateway-panel').classList.remove('hidden');
+        }
+        // STEP 2: Handle Lead Submit, then unlock test engine
+        function handleLeadSubmit(event) {
+            event.preventDefault();
+
+            // Re-validate everything once more before proceeding
+            validateNameInput();
+            validateClassInput();
+            validatePhoneInput();
+            validateEmailInput();
+            if (!isNameValid || !isClassValid || !isPhoneValid || !isEmailValid) {
+                injectFlashAlert("Please correct the errors in the highlighted fields before starting.");
+                return;
+            }
+
+            // Extract verified values
+            const name = document.getElementById('lead-name').value.trim();
+            const sClass = document.getElementById('lead-class').value;
+            const phone = document.getElementById('lead-phone').value.trim();
+            const email = document.getElementById('lead-email').value.trim();
+
+            // POST data to Google Apps Script
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxle_0IKMKvK3tOwnj2Edg2uucJ4Ysl1pGEIeLcA9vQwhq85irjAbTtuXzCSt8o69SgQ/exec';
+            const payload = {
+                name: name,
+                class: sClass,
+                whatsapp: phone,
+                email: email
+            };
+
+            fetch(scriptURL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(payload)
+            })
+            .catch(error => {
+                console.error('Error posting to Google Sheets:', error);
+                // Continue with the assessment even if posting fails
+            })
+            .finally(() => {
+                // Cache credentials locally for dynamic presentation
+                localStorage.setItem('navya_user_name', name);
+                localStorage.setItem('navya_user_class', sClass);
+                localStorage.setItem('navya_user_phone', phone);
+                localStorage.setItem('navya_user_email', email);
+                // Populate Metadata Labels on final layouts
+                document.getElementById('meta-student-name').innerText = name;
+                document.getElementById('meta-student-class').innerText = sClass;
+                // Transition directly to the assessment questions
+                document.getElementById('lead-gateway-panel').classList.add('hidden');
+                document.getElementById('engine-panel').classList.remove('hidden');
+
+                displayActiveQuestion();
+                injectFlashAlert("Details verified! Starting Stream Compass...");
+            });
+        }
+        // Render current targeted question details
+        function displayActiveQuestion() {
+            const q = coreQuestions[activeIndex];
+            
+            // Set labels
+            document.getElementById('phase-badge').innerText = `Phase ${q.phase}/4`;
+            document.getElementById('phase-name').innerText = q.title;
+            document.getElementById('question-index-label').innerText = `Question ${activeIndex + 1} of ${coreQuestions.length}`;
+            document.getElementById('display-question-text').innerText = q.text;
+            // Calculate precise linear progress percentage across 28 states
+            const fillPercentage = (activeIndex / coreQuestions.length) * 100;
+            document.getElementById('progress-bar-fill').style.width = `${fillPercentage}%`;
+            // Adjust opacity highlight for Phase 3 Rings panel
+            const ringsPanel = document.getElementById('sidebar-rings-panel');
+            if (q.phase >= 3) {
+                ringsPanel.classList.remove('opacity-40');
+            } else {
+                ringsPanel.classList.add('opacity-40');
+            }
+            // Render navigation buttons parameters
+            const backBtn = document.getElementById('nav-back-btn');
+            if (activeIndex === 0) {
+                backBtn.classList.add('opacity-30', 'pointer-events-none');
+            } else {
+                backBtn.classList.remove('opacity-30', 'pointer-events-none');
+            }
+            // Button label adjustment on final index
+            const nextBtn = document.getElementById('nav-next-btn');
+            if (activeIndex === coreQuestions.length - 1) {
+                nextBtn.innerHTML = `
+                    Generate Report Brief
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" /></svg>
+                `;
+            } else {
+                nextBtn.innerHTML = `
+                    Next Question
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" /></svg>
+                `;
+            }
+            // Restore highlighted option state if already answered
+            clearHighlightedOptions();
+            const existingValue = globalFormState[q.id];
+            if (existingValue) {
+                const targetBtn = document.getElementById(`choice-${existingValue}`);
+                if (targetBtn) {
+                    targetBtn.style.backgroundColor = '#A8D5BA';
+                    targetBtn.style.color = '#2D3436';
+                    targetBtn.style.borderColor = '#A8D5BA';
+                }
+            }
+            // Recalculate full loop data live
+            recomputeGlobalMetrics();
+        }
+        function clearHighlightedOptions() {
+            for (let i = 1; i <= 6; i++) {
+                const btn = document.getElementById(`choice-${i}`);
+                btn.style.backgroundColor = '';
+                btn.style.color = '';
+                btn.style.borderColor = '';
+            }
+        }
+        // Click Selection Capture (Changed button 4 call from old broken choiceSelectionGate to handleSelection)
+        function handleSelection(scoreValue) {
+            const q = coreQuestions[activeIndex];
+            globalFormState[q.id] = scoreValue;
+            // Highlight choice immediately
+            clearHighlightedOptions();
+            const btn = document.getElementById(`choice-${scoreValue}`);
+            btn.style.backgroundColor = '#A8D5BA';
+            btn.style.color = '#2D3436';
+            btn.style.borderColor = '#A8D5BA';
+            // Cache locally
+            localStorage.setItem('navya_compass_state', JSON.stringify(globalFormState));
+            // Smooth forward transition timing
+            setTimeout(() => {
+                stepForward();
+            }, 250);
+        }
+        function stepForward() {
+            const currentQ = coreQuestions[activeIndex];
+            if (!globalFormState[currentQ.id]) {
+                injectFlashAlert("Please select a score rating before moving to the next question.");
+                return;
+            }
+            if (activeIndex < coreQuestions.length - 1) {
+                activeIndex++;
+                displayActiveQuestion();
+            } else {
+                // Assessment is complete. Trigger Final Dashboard instantly since lead data is captured upfront.
+                document.getElementById('engine-panel').classList.add('hidden');
+                
+                // Submit to Google Sheets (if URL exists)
+                dispatchToGoogleSheetsBackup();
+                
+                renderFinalDashboard();
+            }
+        }
+        function stepBackward() {
+            if (activeIndex > 0) {
+                activeIndex--;
+                displayActiveQuestion();
+            }
+        }
+        function injectFlashAlert(messageText) {
+            const box = document.createElement('div');
+            box.className = "fixed bottom-4 right-4 bg-gray-900 text-white text-xs font-bold py-3 px-5 rounded-lg shadow-md z-50 border border-gray-700 transition-opacity duration-300 no-print";
+            box.innerText = messageText;
+            document.body.appendChild(box);
+            setTimeout(() => {
+                box.style.opacity = "0";
+                setTimeout(() => box.remove(), 300);
+            }, 2500);
+        }
+        // COMPREHENSIVE MATHS CALCULATION PIPELINE FOR THE POOL SYSTEM
+        function recomputeGlobalMetrics() {
+            // Science: Q1, Q2, Q8, Q11 (Max base 24) -> Scaled to 20
+            let sciSum = 0, sciCount = 0;
+            ["Q1", "Q2", "Q8", "Q11"].forEach(id => {
+                if (globalFormState[id]) { sciSum += globalFormState[id]; sciCount++; }
+            });
+            const scienceScore = sciCount > 0 ? (sciSum / (sciCount * 6)) * 20 : 0;
+            // Commerce: Q4, Q9, Q12 (Max base 18) -> Scaled to 20
+            let comSum = 0, comCount = 0;
+            ["Q4", "Q9", "Q12"].forEach(id => {
+                if (globalFormState[id]) { comSum += globalFormState[id]; comCount++; }
+            });
+            const commerceScore = comCount > 0 ? (comSum / (comCount * 6)) * 20 : 0;
+            // Humanities: Q3, Q5, Q6, Q7, Q10, Q13 (Max base 36) -> Scaled to 20
+            let humSum = 0, humCount = 0;
+            ["Q3", "Q5", "Q6", "Q7", "Q10", "Q13"].forEach(id => {
+                if (globalFormState[id]) { humSum += globalFormState[id]; humCount++; }
+            });
+            const humanitiesScore = humCount > 0 ? (humSum / (humCount * 6)) * 20 : 0;
+            // Update active sidebar text/widths
+            document.getElementById('sidebar-val-science').innerText = `${scienceScore.toFixed(1)}/20`;
+            document.getElementById('sidebar-bar-science').style.width = `${(scienceScore / 20) * 100}%`;
+            document.getElementById('sidebar-val-commerce').innerText = `${commerceScore.toFixed(1)}/20`;
+            document.getElementById('sidebar-bar-commerce').style.width = `${(commerceScore / 20) * 100}%`;
+            document.getElementById('sidebar-val-humanities').innerText = `${humanitiesScore.toFixed(1)}/20`;
+            document.getElementById('sidebar-bar-humanities').style.width = `${(humanitiesScore / 20) * 100}%`;
+            // Phase 3 circular rings parsing
+            // Empathy: Q15, Q20 (Max 12)
+            let empRaw = (globalFormState["Q15"] || 0) + (globalFormState["Q20"] || 0);
+            let empPct = empRaw > 0 ? (empRaw / 12) * 100 : 0;
+            setCircleOffsetValue("ring-emp", empPct);
+            document.getElementById('ring-txt-emp').innerText = `${Math.round(empPct)}%`;
+            // Communication: Q16, Q19, Q21 (Max 18)
+            let commRaw = (globalFormState["Q16"] || 0) + (globalFormState["Q19"] || 0) + (globalFormState["Q21"] || 0);
+            let commPct = commRaw > 0 ? (commRaw / 18) * 100 : 0;
+            setCircleOffsetValue("ring-comm", commPct);
+            document.getElementById('ring-txt-comm').innerText = `${Math.round(commPct)}%`;
+            // Systems Thinking: Q17, Q18 (Max 12)
+            let sysRaw = (globalFormState["Q17"] || 0) + (globalFormState["Q18"] || 0);
+            let sysPct = sysRaw > 0 ? (sysRaw / 12) * 100 : 0;
+            setCircleOffsetValue("ring-sys", sysPct);
+            document.getElementById('ring-txt-sys').innerText = `${Math.round(sysPct)}%`;
+        }
+        function setCircleOffsetValue(elementId, targetPct) {
+            const ringCircle = document.getElementById(elementId);
+            if (!ringCircle) return;
+            const radius = 23;
+            const circum = 2 * Math.PI * radius; // ~144.5
+            const calculatedOffset = circum - (targetPct / 100) * circum;
+            ringCircle.style.strokeDashoffset = calculatedOffset;
+        }
+        function setLargeCircleOffsetValue(elementId, targetPct) {
+            const ringCircle = document.getElementById(elementId);
+            if (!ringCircle) return;
+            const radius = 34;
+            const circum = 2 * Math.PI * radius; // ~213.6
+            const calculatedOffset = circum - (targetPct / 100) * circum;
+            ringCircle.style.strokeDashoffset = calculatedOffset;
+        }
+        // BACKGROUND DISPATCH TO GOOGLE SHEETS
+        function dispatchToGoogleSheetsBackup() {
+            if (!GOOGLE_SHEETS_WEBAPP_URL) {
+                console.log("No backup WebApp URL provided. Skipping Sheets submission.");
+                return;
+            }
+            const name = localStorage.getItem('navya_user_name') || '--';
+            const sClass = localStorage.getItem('navya_user_class') || '--';
+            const phone = localStorage.getItem('navya_user_phone') || '--';
+            const email = localStorage.getItem('navya_user_email') || '--';
+            // Calculate metrics
+            let sciSum = 0; ["Q1", "Q2", "Q8", "Q11"].forEach(id => sciSum += (globalFormState[id] || 0));
+            const scienceScore = (sciSum / 24) * 20;
+            let comSum = 0; ["Q4", "Q9", "Q12"].forEach(id => comSum += (globalFormState[id] || 0));
+            const commerceScore = (comSum / 18) * 20;
+            let humSum = 0; ["Q3", "Q5", "Q6", "Q7", "Q10", "Q13"].forEach(id => humSum += (globalFormState[id] || 0));
+            const humanitiesScore = (humSum / 36) * 20;
+            let verdict = "SCIENCE";
+            if (commerceScore > scienceScore && commerceScore > humanitiesScore) verdict = "COMMERCE";
+            if (humanitiesScore > scienceScore && humanitiesScore > commerceScore) verdict = "HUMANITIES";
+            const payload = {
+                name: name,
+                class: sClass,
+                phone: phone,
+                email: email,
+                verdict: verdict,
+                science_score: scienceScore.toFixed(1),
+                commerce_score: commerceScore.toFixed(1),
+                humanities_score: humanitiesScore.toFixed(1),
+                answers: globalFormState
+            };
+            // Non-blocking fetch request to the WebApp API using no-cors
+            fetch(GOOGLE_SHEETS_WEBAPP_URL, {
+                method: "POST",
+                mode: "no-cors",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(payload)
+            }).then(() => {
+                console.log("Dossier backup submitted successfully to Sheets API.");
+            }).catch(err => {
+                console.error("Sheets sync failed:", err);
+            });
+        }
+        // RENDER CONSOLIDATED FINAL BLUEPRINT SUMMARY REPORT DATA
+        function renderFinalDashboard() {
+            document.getElementById('results-panel').classList.remove('hidden');
+            // Perform master winner lookups
+            let sciSum = 0; ["Q1", "Q2", "Q8", "Q11"].forEach(id => sciSum += (globalFormState[id] || 0));
+            const scienceScore = (sciSum / 24) * 20;
+            let comSum = 0; ["Q4", "Q9", "Q12"].forEach(id => comSum += (globalFormState[id] || 0));
+            const commerceScore = (comSum / 18) * 20;
+            let humSum = 0; ["Q3", "Q5", "Q6", "Q7", "Q10", "Q13"].forEach(id => humSum += (globalFormState[id] || 0));
+            const humanitiesScore = (humSum / 36) * 20;
+            let finalWinner = "SCIENCE";
+            let secAlt1 = "COMMERCE";
+            let secAlt2 = "HUMANITIES";
+            let highestVal = scienceScore;
+            if (commerceScore > highestVal) {
+                finalWinner = "COMMERCE";
+                highestVal = commerceScore;
+                secAlt1 = scienceScore >= humanitiesScore ? "SCIENCE" : "HUMANITIES";
+                secAlt2 = scienceScore >= humanitiesScore ? "HUMANITIES" : "SCIENCE";
+            }
+            if (humanitiesScore > highestVal) {
+                finalWinner = "HUMANITIES";
+                highestVal = humanitiesScore;
+                secAlt1 = scienceScore >= commerceScore ? "SCIENCE" : "COMMERCE";
+                secAlt2 = scienceScore >= commerceScore ? "COMMERCE" : "SCIENCE";
+            }
+            // Set Title fields text
+            document.getElementById('verdict-banner-title').innerText = finalWinner;
+            document.getElementById('parent-verdict-title').innerText = finalWinner;
+            document.getElementById('alt-title-1').innerText = `Alternative 1: ${secAlt1}`;
+            document.getElementById('alt-title-2').innerText = `Alternative 2: ${secAlt2}`;
+            // Handle content text configurations per stream profile winner
+            const pointsList = document.getElementById('verdict-points-list');
+            const parentAptitudeLabel = document.getElementById('parent-aptitude-verdict-text');
+            const parentSkillLabel = document.getElementById('parent-skills-upgrade-text');
+            const nepBox = document.getElementById('nep-checkboxes-box');
+            if (finalWinner === "SCIENCE") {
+                pointsList.innerHTML = `
+                    <li class="flex items-start gap-2">
+                        <span class="text-emerald-600 font-bold">
+✓
+</span>
+                        <span>Excellent comfort in finding numerical logic patterns and analyzing physics or abstract systems rules.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-emerald-600 font-bold">
+✓
+</span>
+                        <span>Your responses favor strict data validation parameters, protecting your trajectory options.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-emerald-600 font-bold">
+✓
+</span>
+                        <span>Highly suited to target premium, new-age convergence paths such as Bioinformatics, Quantum Applications, or Space Tech channels.</span>
+                    </li>
+                `;
+                parentAptitudeLabel.innerText = "The student shows excellent analytical readiness in quantitative operations, scientific puzzles, and logical problem isolation.";
+                parentSkillLabel.innerText = "Ensure your child couples their science focus with applied programming fundamentals and data visualization certificates to secure high-value entry tracks.";
+                nepBox.innerHTML = `
+                    <div class="flex items-start gap-2.5 p-2.5 rounded-lg bg-gray-50">
+                        <input type="checkbox" checked disabled class="mt-0.5 accent-emerald-500 shrink-0">
+                        <div>
+                            <strong class="text-gray-800">Applied AI Data Science Minor</strong>
+                            <p class="text-[10px] text-gray-600 block mt-1">Master predictive algorithms, machine learning frameworks, and data infrastructure analysis. Essential for staying ahead in an AI-driven economy.</p>
+                            <p class="text-[10px] text-emerald-600 font-semibold block mt-1">Why: AI literacy is non-negotiable across all science domains.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-2.5 p-2.5 rounded-lg bg-gray-50">
+                        <input type="checkbox" checked disabled class="mt-0.5 accent-emerald-500 shrink-0">
+                        <div>
+                            <strong class="text-gray-800">Sustainability & Climate Tech Electives</strong>
+                            <p class="text-[10px] text-gray-600 block mt-1">Explore renewable energy systems, carbon accounting, and environmental engineering. Position yourself in the fastest-growing sector globally.</p>
+                            <p class="text-[10px] text-emerald-600 font-semibold block mt-1">Why: Green tech is creating the highest-paying technical roles by 2030.</p>
+                        </div>
+                    </div>
+                `;
+            } else if (finalWinner === "COMMERCE") {
+                pointsList.innerHTML = `
+                    <li class="flex items-start gap-2">
+                        <span class="text-emerald-600 font-bold">
+✓
+</span>
+                        <span>High natural interest in exploring corporate wealth creation loops, market analytics, and fiscal frameworks.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-emerald-600 font-bold">
+✓
+</span>
+                        <span>Your execution metrics excel at process optimization, project coordination, and scheduling.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-emerald-600 font-bold">
+✓
+</span>
+                        <span>Perfect profile fit to lead automated fintech strategy, global risk regulation, or green finance asset management.</span>
+                    </li>
+                `;
+                parentAptitudeLabel.innerText = "The student demonstrates highly operational logic capabilities in market systems tracing, resource management, and budgeting mechanics.";
+                parentSkillLabel.innerText = "Ensure the student acquires Python for finance, predictive analytics modeling, and ESG accounting parameters early on to remain irreplaceable.";
+                nepBox.innerHTML = `
+                    <div class="flex items-start gap-2.5">
+                        <input type="checkbox" checked disabled class="mt-0.5 accent-emerald-500">
+                        <div>
+                            <strong class="text-gray-800">Business Intelligence Analytics:</strong>
+                            <span class="text-[10px] text-gray-400 block">Critical skill for interpreting complex user transaction histories and data flow loops.</span>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-2.5">
+                        <input type="checkbox" checked disabled class="mt-0.5 accent-emerald-500">
+                        <div>
+                            <strong class="text-gray-800">Cyber Law & Digital Policy:</strong>
+                            <span class="text-[10px] text-gray-400 block">Prepares the commerce professional for lucrative global compliance architecture positions.</span>
+                        </div>
+                    </div>
+                `;
+            } else {
+                pointsList.innerHTML = `
+                    <li class="flex items-start gap-2">
+                        <span class="text-emerald-600 font-bold">
+✓
+</span>
+                        <span>Outstanding capabilities in understanding social mechanics, deep human behavior traits, and communication design.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-emerald-600 font-bold">
+✓
+</span>
+                        <span>You demonstrate a highly advanced intuitive capacity for empathy-driven problem framing.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-emerald-600 font-bold">
+✓
+</span>
+                        <span>Uniquely positioned to secure high-growth premium corporate strategy roles, UI/UX design consulting, or digital policy advisory.</span>
+                    </li>
+                `;
+                parentAptitudeLabel.innerText = "The student shows superior cognitive strength in creative storytelling, narrative writing, and interpersonal conflict de-escalation.";
+                parentSkillLabel.innerText = "Crucial Note: Layer data literacy metrics and UX analytics frameworks onto their human insights to build an insulated, high-paying asset.";
+                nepBox.innerHTML = `
+                    <div class="flex items-start gap-2.5">
+                        <input type="checkbox" checked disabled class="mt-0.5 accent-emerald-500">
+                        <div>
+                            <strong class="text-gray-800">UX Psychology & Human-Computer Interface:</strong>
+                            <span class="text-[10px] text-gray-400 block">Enables humanities students to design corporate technology user products globally.</span>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-2.5">
+                        <input type="checkbox" checked disabled class="mt-0.5 accent-emerald-500">
+                        <div>
+                            <strong class="text-gray-800">Digital Communications & Content Strategy:</strong>
+                            <span class="text-[10px] text-gray-400 block">Leverages authentic strategic storytelling to secure institutional trust in an automated economy.</span>
+                        </div>
+                    </div>
+                `;
+            }
+            // Populate specific recommended action lists
+            document.getElementById('student-actions-list').innerHTML = `
+                <li>Review this compiled report alongside Navya’s customized T-shaped Talent Architecture matrix parameters.</li>
+                <li>Research flexible undergraduate institutions offering the specific ${finalWinner}-adjacent minor paths detailed above.</li>
+                <li>Commit to building one foundational technical certification layer (e.g., Python basics or statistics) before starting college.</li>
+            `;
+            // Populate standings charts
+            document.getElementById('final-txt-science').innerText = `${scienceScore.toFixed(1)}/20`;
+            document.getElementById('final-bar-science').style.width = `${(scienceScore / 20) * 100}%`;
+            document.getElementById('final-txt-commerce').innerText = `${commerceScore.toFixed(1)}/20`;
+            document.getElementById('final-bar-commerce').style.width = `${(commerceScore / 20) * 100}%`;
+            document.getElementById('final-txt-humanities').innerText = `${humanitiesScore.toFixed(1)}/20`;
+            document.getElementById('final-bar-humanities').style.width = `${(humanitiesScore / 20) * 100}%`;
+            // Populate larger progress rings
+            let empRaw = (globalFormState["Q15"] || 0) + (globalFormState["Q20"] || 0);
+            let empPct = empRaw > 0 ? (empRaw / 12) * 100 : 0;
+            setLargeCircleOffsetValue("final-ring-emp", empPct);
+            document.getElementById('final-txt-emp').innerText = `${Math.round(empPct)}%`;
+            let commRaw = (globalFormState["Q16"] || 0) + (globalFormState["Q19"] || 0) + (globalFormState["Q21"] || 0);
+            let commPct = commRaw > 0 ? (commRaw / 18) * 100 : 0;
+            setLargeCircleOffsetValue("final-ring-comm", commPct);
+            document.getElementById('final-txt-comm').innerText = `${Math.round(commPct)}%`;
+            let sysRaw = (globalFormState["Q17"] || 0) + (globalFormState["Q18"] || 0);
+            let sysPct = sysRaw > 0 ? (sysRaw / 12) * 100 : 0;
+            setLargeCircleOffsetValue("final-ring-sys", sysPct);
+            document.getElementById('final-txt-sys').innerText = `${Math.round(sysPct)}%`;
+        }
+        // Toggle Views Between Student and Parent Summaries
+        function toggleDashboardTabs(tabTarget) {
+            const studentView = document.getElementById('dashboard-student-view');
+            const parentView = document.getElementById('dashboard-parent-view');
+            const studentBtn = document.getElementById('tab-student-btn');
+            const parentBtn = document.getElementById('tab-parent-btn');
+            if (tabTarget === 'student') {
+                studentView.classList.remove('hidden');
+                parentView.classList.add('hidden');
+                studentBtn.style.backgroundColor = '#A8D5BA';
+                studentBtn.style.color = '#2D3436';
+                parentBtn.style.backgroundColor = '';
+                parentBtn.style.color = '';
+                parentBtn.className = "px-5 py-2.5 rounded-lg text-xs font-bold transition-all bg-white border border-gray-200 text-gray-500 hover:bg-gray-50";
+            } else {
+                studentView.classList.add('hidden');
+                parentView.classList.remove('hidden');
+                parentBtn.style.backgroundColor = '#B4C7E7';
+                parentBtn.style.color = '#2D3436';
+                studentBtn.style.backgroundColor = '';
+                studentBtn.style.color = '';
+                studentBtn.className = "px-5 py-2.5 rounded-lg text-xs font-bold transition-all bg-white border border-gray-200 text-gray-500 hover:bg-gray-50";
+            }
+        }
+        // EXPORT ACTION: SIMULATED INSTANT MAIL & WHATSAPP DELIVERABILITY
+        function dispatchLeadEmailAndWhatsApp() {
+            // Pull data
+            const name = localStorage.getItem('navya_user_name') || '--';
+            const sClass = localStorage.getItem('navya_user_class') || '--';
+            const email = localStorage.getItem('navya_user_email') || '';
+            const phone = localStorage.getItem('navya_user_phone') || '';
+            // Compute values
+            let sciSum = 0; ["Q1", "Q2", "Q8", "Q11"].forEach(id => sciSum += (globalFormState[id] || 0));
+            const scienceScore = (sciSum / 24) * 20;
+            let comSum = 0; ["Q4", "Q9", "Q12"].forEach(id => comSum += (globalFormState[id] || 0));
+            const commerceScore = (comSum / 18) * 20;
+            let humSum = 0; ["Q3", "Q5", "Q6", "Q7", "Q10", "Q13"].forEach(id => humSum += (globalFormState[id] || 0));
+            const humanitiesScore = (humSum / 36) * 20;
+            let verdict = "SCIENCE";
+            if (commerceScore > scienceScore && commerceScore > humanitiesScore) verdict = "COMMERCE";
+            if (humanitiesScore > scienceScore && humanitiesScore > commerceScore) verdict = "HUMANITIES";
+            // Format message template
+            const message = `Hello Navya, I just completed my Career Stream Compass Assessment. Here are my details:%0A` +
+                            `*Student Name:* ${name}%0A` +
+                            `*Class:* ${sClass}%0A` +
+                            `*Email:* ${email}%0A` +
+                            `*Verdict:* ${verdict}%0A` +
+                            `*Scores:* Science: ${scienceScore.toFixed(1)}/20, Commerce: ${commerceScore.toFixed(1)}/20, Humanities: ${humanitiesScore.toFixed(1)}/20%0A` +
+                            `Please review my profile and help me lock my 1:1 consultation session!`;
+            // Open Mail Client
+            const mailtoLink = `mailto:Navya.mn@finnfluent.org?subject=CareerWithNavya results for ${name}&body=Hello Navya,%0A%0AI have successfully completed my Stream Compass Assessment.%0A%0AStudent: ${name}%0AClass: ${sClass}%0AComputed Trajectory: ${verdict}%0A%0AScience: ${scienceScore.toFixed(1)}/20%0ACommerce: ${commerceScore.toFixed(1)}/20%0AHumanities: ${humanitiesScore.toFixed(1)}/20%0A%0APlease contact us at ${phone} / ${email} to discuss details.`;
+            
+            // Trigger Mail client
+            window.open(mailtoLink, '_blank');
+            // Copy metadata block to Clipboard
+            const shareableText = `Student: ${name}\nClass: ${sClass}\nVerdict: ${verdict}\nScience: ${scienceScore.toFixed(1)}/20\nCommerce: ${commerceScore.toFixed(1)}/20\nHumanities: ${humanitiesScore.toFixed(1)}/20`;
+            const dummyInput = document.createElement('textarea');
+            dummyInput.value = shareableText;
+            document.body.appendChild(dummyInput);
+            dummyInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(dummyInput);
+            injectFlashAlert("Dossier data formatted successfully! Results generated in your mail draft and copied to clipboard.");
+        }
+        // Base64 Encoded Sharing Lin
